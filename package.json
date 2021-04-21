@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
    "engines": {
-    "node": "15.0.10",
-    "npm": "7.5.6"
+    "node": "15.0.10"
   },
   "dependencies": {
     "@shopify/polaris": "^6.3.0",
