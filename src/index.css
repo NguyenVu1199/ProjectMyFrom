@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.main{
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+}
+.form{
+  width: 400px;
+  margin: auto;
+  margin-bottom: 80px;
+}
+a{
+  text-decoration: solid;
+  list-style: none;
+  color: black;
+}
