@@ -7,11 +7,13 @@ code {
     monospace;
 }
 .main{
+  width: 50%;
   margin: auto;
   margin-top: 50px;
 }
 .form{
-  width: 50%;
+  width: 60%;
+  min-width:30%;
   margin: auto;
   margin-bottom: 80px;
 }
