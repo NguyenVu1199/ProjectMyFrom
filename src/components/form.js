@@ -148,12 +148,13 @@ const Form = (props) => {
 
   return (
     <div className="form">
-      <DisplayText size="small">Please enter full information!</DisplayText>
       <br />
       <Layout>
         <Layout.Section>
+        <DisplayText className="create_user" size="medium">Create Users</DisplayText>
+        <br></br>
           <Card sectioned>
-            <FormLayout style={{ width: "100%" }}>
+            <FormLayout>
               <TextField
                 label="Full Name(*)"
                 onChange={(e) => onChangeName(e)}
@@ -167,7 +168,7 @@ const Form = (props) => {
                 <InlineError message="Input fullname isvalid!" />
               )}
               <TextField
-                label="Phone(*)"
+                label="Phone Nummber(*)"
                 onChange={(e) => onChangePhone(e)}
                 value={valuePhone}
                 placeholder="Enter your phone"
@@ -204,6 +205,7 @@ const Form = (props) => {
               )}
               {reacapcha && (
                 <ReCAPTCHA
+                  // sitekey="6LftMKEaAAAAAMFVIG7Qcma2394rdYh5srsZlnXd"
                   sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                   onChange={onRecapcha}
                 />
