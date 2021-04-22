@@ -1,4 +1,4 @@
-import { Card, Tabs } from "@shopify/polaris";
+import { Card, Tabs,DisplayText } from "@shopify/polaris";
 import { useState, useCallback } from "react";
 import "@shopify/polaris/dist/styles.css";
 import Form from "./components/form";
@@ -24,18 +24,17 @@ function App() {
   ];
   return (
     <div className="main">
+    <div className="userManager"><DisplayText size="extraLarge">My Project</DisplayText></div>
       <Card>
         <br></br>
-        <div style={{fontSize:"35px",textAlign:"center"}}>
-          {selected === 0 && <h6 style={{color:"darkgreen"}}>Create Account</h6>}
-          {selected === 1 &&<h6 style={{color:"darkgreen"}}>User List</h6>}
-        </div>
+        <div className="menu">
         <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
           <Card.Section>
             {selected === 0 && <Form handleClick={handleClick} />}
             {selected === 1 && <ListUser />}
           </Card.Section>
         </Tabs>
+        </div>
       </Card>
     </div>
   );
