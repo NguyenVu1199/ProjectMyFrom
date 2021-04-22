@@ -204,7 +204,7 @@ const Form = (props) => {
               )}
               {reacapcha && (
                 <ReCAPTCHA
-                  sitekey="6LelZAsTAAAAAAv1ADYDnq8AzbmPmbMvjh-xhfgB"
+                  sitekey="6LftMKEaAAAAAMFVIG7Qcma2394rdYh5srsZlnXd"
                   onChange={onRecapcha}
                 />
               )}
