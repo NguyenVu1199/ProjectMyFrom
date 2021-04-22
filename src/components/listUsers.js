@@ -80,6 +80,7 @@ const ListUser = () => {
           }}
         />
         <br />
+<div className="list">
         <Card>
           <DataTable
             columnContentTypes={["text", "text", "text", "text", "text"]}
@@ -87,6 +88,7 @@ const ListUser = () => {
             rows={rows}
           />
         </Card>
+</div>
         <br />
         <br />
       </Layout.Section>
