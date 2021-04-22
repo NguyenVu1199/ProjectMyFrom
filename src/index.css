@@ -6,24 +6,89 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.main{
-  width: 50%;
+.table{
+  width: 80%;
   margin: auto;
-  margin-top: 50px;
+}
+.main{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+.Polaris-Layout{
+  display: none;
+}
+.Polaris-Layout__Section p{
+ font-weight: 500;
+}
+.userManager{
+  color: #006E52;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  height: 100px;
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  background-color: white;
+}
+.Polaris-DisplayText{
+  color: #006E52;
+}
+.Polaris-Tabs__Wrapper{
+  margin: auto;
+    width: 77%;
+}
+.Polaris-Tabs__Wrapper ul {
+  margin-left: 35%;
+}
+.Polaris-Tabs__Wrapper ul li{
+  color: #006E52;
+}
+.Polaris-Tabs__Tab span{
+  font-weight: bold;
+  color: #006E52;
+  font-size: 20px;
+}
+.menu{
+  align-items: center;
 }
 .form{
-  width: 60%;
-  min-width:30%;
+  width: 50%;
   margin: auto;
-  margin-bottom: 80px;
+  height: auto;
+  margin-bottom: 50px;
+}
+.Polaris-Card__Section .form{
+  margin-top: -20px;
+}
+.Polaris-Connected input{
+  height: 50px;
+}
+.form .Polaris-Card__Section input{
+  height: 40px;
+}
+.form .Polaris-Card__Section{
+      height: auto;
 }
 a{
   text-decoration: solid;
   list-style: none;
-  color: black;
+  color: #006E52;
+  font-weight: normal;
 }
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 740px) {
   .form, .main, .list {
     width: 100%;
+  }
+  .Polaris-Tabs__Wrapper{
+    margin:0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .form{
+    width: 60%;
+  }
+  .Polaris-Tabs__Wrapper ul{
+    margin-left: 30%;
   }
 }
