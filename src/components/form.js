@@ -215,6 +215,6 @@ const Form = (props) => {
         </Layout.Section>
       </Layout>
     </div>
-  );
+  )
 };
 export default Form;
