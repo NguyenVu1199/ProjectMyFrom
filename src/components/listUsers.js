@@ -1,21 +1,21 @@
-import { Card, DataTable, Link, Pagination, Layout } from "@shopify/polaris";
+import { Card, DataTable, Link, Pagination, Layout,DisplayText } from "@shopify/polaris";
 import "@shopify/polaris/dist/styles.css";
 import { useEffect, useState } from "react";
 const ListUser = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 7;
+  const itemsPerPage = 5;
   
   const onNextPage = () => {
     setCurrentPage(currentPage + 1);
-    var total = currentPage * 7 + currentItems.length;
+    var total = currentPage * 5 + currentItems.length;
     if (total >= data.length) {
       setBtnNext(false);
       setBtnPrev(true);
-    } else if (7 < total < data.length) {
+    } else if (5 < total < data.length) {
       setBtnPrev(true);
       setBtnNext(true);
-    } else if (total === 7) {
+    } else if (total === 5) {
       setBtnPrev(false);
       setBtnNext(true);
     }
@@ -53,7 +53,6 @@ const ListUser = () => {
       item.phone,
       <Link removeUnderline key={item.address}>
         <a
-          style={{ fontWeight: "bolder" }}
           href={`https://www.google.com/maps/place/${item.address
             .split(/[$&+,:;=?@#|'<>.^*()%!-]/)
             .join("+")}`}
@@ -66,8 +65,12 @@ const ListUser = () => {
     ]);
   });
   return (
+    <div className="table">
     <Layout>
       <Layout.Section>
+      <DisplayText className="create_user" size="medium">User List</DisplayText>
+      <br></br>
+      <div>
         <Pagination
           label={`${currentPage}/${Math.ceil(data.length / itemsPerPage)}`}
           hasPrevious={btnPrev}
@@ -79,8 +82,9 @@ const ListUser = () => {
             onNextPage();
           }}
         />
+        </div>
         <br />
-<div className="list">
+        <div className="list">
         <Card>
           <DataTable
             columnContentTypes={["text", "text", "text", "text", "text"]}
@@ -88,11 +92,13 @@ const ListUser = () => {
             rows={rows}
           />
         </Card>
-</div>
+        </div>
         <br />
         <br />
       </Layout.Section>
     </Layout>
+    </div>
   );
 };
 export default ListUser;
+
